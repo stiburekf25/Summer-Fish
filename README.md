@@ -1,5 +1,7 @@
 GAME TUTORIAL:
+
 English:
+
 CONTROLS:
 - Movement: A / D
 - Interaction: E
