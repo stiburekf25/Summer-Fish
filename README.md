@@ -1,3 +1,7 @@
+![Summer Fish](jezero.png)
+
+![Summer Fish](bar.png)
+
 GAME TUTORIAL:
 
 English:
