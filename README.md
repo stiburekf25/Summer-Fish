@@ -45,6 +45,8 @@
 
 ![Summer Fish](bar.png)
 ![Summer Fish](rybareni.png)
+
+
 GAME TUTORIAL:
 
 English:
