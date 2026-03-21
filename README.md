@@ -60,6 +60,7 @@ Side effect: the higher your misery, the more keys you have to press while fishi
 Tip: Keep all three stats high—it will make fishing much easier
 
 Czech:
+
 OVLÁDÁNÍ:
 - Pohyb: A / D
 - Interakce: E
