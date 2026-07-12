@@ -106,6 +106,30 @@
   .nav-links a:hover{border-color:var(--sunset-deep);}
   @media (max-width:600px){ .nav-links{display:none;} }
 
+  .lang-switch{
+    display:flex;
+    gap:6px;
+    font-family:'Kalam',cursive;
+    font-size:14px;
+    margin-left:20px;
+  }
+  .lang-btn{
+    background:transparent;
+    border:2px solid var(--ink);
+    padding:4px 11px;
+    cursor:pointer;
+    font-family:inherit;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.2;
+  }
+  .lang-btn.active{
+    background:var(--sunset);
+    color:#fff7ec;
+    border-color:var(--sunset-deep);
+  }
+  .lang-btn:hover{ transform:translateY(-1px); }
+
   .hero-grid{
     display:grid;
     grid-template-columns:1.05fr 0.95fr;
@@ -417,30 +441,34 @@
       Summer Fish
     </div>
     <nav class="nav-links">
-      <a href="#pribeh">Příběh</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#hra">Herní smyčka</a>
-      <a href="#ovladani">Ovládání</a>
+      <a href="#pribeh" data-i18n="nav_pribeh">Příběh</a>
+      <a href="#galerie" data-i18n="nav_galerie">Galerie</a>
+      <a href="#hra" data-i18n="nav_hra">Herní smyčka</a>
+      <a href="#ovladani" data-i18n="nav_ovladani">Ovládání</a>
     </nav>
+    <div class="lang-switch" role="group" aria-label="Language switch">
+      <button type="button" class="lang-btn active" data-lang="cs">CZ</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
   </div>
 
   <div class="hero-grid">
     <div>
-      <span class="eyebrow">ručně kreslená letní pixelovka</span>
+      <span class="eyebrow" data-i18n="eyebrow">ručně kreslená letní pixelovka</span>
       <h1>Summer<br><span class="drip">Fish</span> 🎣</h1>
-      <p class="lede tag">Pepa má rozbité auto uprostřed letní dovolené. Jediná cesta domů vede přes jezero, prut a pořádnou trpělivost — vyraž s ním rybařit, sbírat borůvky a poznávat lidi kolem jezera.</p>
+      <p class="lede tag" data-i18n="lede">Josef má rozbité auto uprostřed letní dovolené. Jediná cesta domů vede přes jezero, prut a pořádnou trpělivost — vyraž s ním rybařit, sbírat borůvky a poznávat lidi kolem jezera.</p>
       <div class="cta-row">
         <a class="btn" href="https://github.com/stiburekf25/Summer-Fish/releases/download/v1.0/summer_fish_setup.exe" download>
           <svg class="frame" viewBox="0 0 220 56" preserveAspectRatio="none"><path d="M6,4 C60,0 160,8 214,3 C218,20 212,36 216,52 C150,56 70,50 4,54 C0,36 4,20 6,4Z" fill="#203f43" stroke="#2b2118" stroke-width="1.5"/></svg>
-          <span>⬇ Stáhnout hru (.exe)</span>
+          <span data-i18n="btn_download">⬇ Stáhnout hru (.exe)</span>
         </a>
       </div>
-      <p class="platform-note">💻 Windows · zdarma · MIT licence</p>
+      <p class="platform-note" data-i18n="platform_note">💻 Windows · zdarma · MIT licence</p>
     </div>
 
     <figure class="polaroid hero-photo">
       <img src="rybareni.png" alt="Screenshot rybaření na loďce ve hře Summer Fish">
-      <figcaption>rybaření za soumraku</figcaption>
+      <figcaption data-i18n="hero_caption">rybaření za soumraku</figcaption>
       <div class="tape"></div>
     </figure>
   </div>
@@ -449,47 +477,47 @@
 <section id="pribeh">
   <div class="wrap story-grid">
     <div>
-      <p class="kicker">o hře</p>
-      <h2 class="title">Prázdninový výlet,<br>který se protáhl</h2>
-      <p>Hrajete za Pepu, kterému na cestě za letním dobrodružstvím se rozbilo auto. Aby se dostal domů, musí si vydělat dost mincí — a k tomu vede jediná cesta: k jezeru, s prutem v ruce.</p>
-      <p>Mezi hozením návnady a čekáním na záběr proteče spousta času — na sběr borůvek, povídání s místními a starost o to, aby Pepa nebyl hladový, žíznivý ani sklíčený. Klidná hra o tom, že i porouchané auto může být začátek dobrého léta.</p>
+      <p class="kicker" data-i18n="kicker_ohre">o hře</p>
+      <h2 class="title" data-i18n="title_story">Prázdninový výlet,<br>který se protáhl</h2>
+      <p data-i18n="story_p1">Hrajete za Josefa, kterému na cestě za letním dobrodružstvím vypověděla auto službu. Aby se dostal domů, musí si vydělat dost mincí — a k tomu vede jediná cesta: k jezeru, s prutem v ruce.</p>
+      <p data-i18n="story_p2">Mezi hozením návnady a čekáním na záběr proteče spousta času — na sběr borůvek, povídání s místními a starost o to, aby Josef nebyl hladový, žíznivý ani smutný. Klidná hra o tom, že i porouchané auto může být začátek dobrého léta.</p>
     </div>
     <div class="journal-card">
       <img src="pepa.gif" alt="Portrét Pepy" class="pepa-portrait">
-      <h3>Pepa</h3>
-      <p>Přijíždí na letní výlet s autem, které ho nechalo na holičkách. Trpělivý, mírně nešikovný, ale odhodlaný ulovit si cestu domů — jednu rybu, jednu borůvku a jednu minci po druhé.</p>
+      <h3 data-i18n="pepa_title">Josef</h3>
+      <p data-i18n="pepa_desc">Přijíždí na letní výlet s autem, které ho nechalo na holičkách. Trpělivý, mírně nešikovný, ale odhodlaný ulovit si cestu domů — jednu rybu, jednu borůvku a jednu minci po druhé.</p>
     </div>
   </div>
 </section>
 
 <section id="galerie" style="background:var(--parchment-dark);">
   <div class="wrap">
-    <p class="kicker">z deníku hry</p>
-    <h2 class="title">Pár fotek z destinací</h2>
+    <p class="kicker" data-i18n="kicker_denik">z deníku hry</p>
+    <h2 class="title" data-i18n="title_gallery">Pár fotek z jezera, baru i lesa</h2>
     <div class="gallery">
       <figure class="polaroid">
         <img src="rybareni.png" alt="Rybaření na loďce, psaní písmen pro zdolání ryby">
-        <figcaption>zdolávání úlovku</figcaption>
+        <figcaption data-i18n="cap_catch">zdolávání úlovku</figcaption>
         <div class="tape"></div>
       </figure>
       <figure class="polaroid">
         <img src="bar.png" alt="Interiér baru ve hře Summer Fish">
-        <figcaption>večer v baru</figcaption>
+        <figcaption data-i18n="cap_bar">večer v baru</figcaption>
         <div class="tape"></div>
       </figure>
       <figure class="polaroid">
-        <img src="auto.png" alt="Výbava Pepy">
-        <figcaption>Výbava Pepy</figcaption>
+        <img src="obchod.png" alt="Kufr auta s prutem a kbelíkem">
+        <figcaption data-i18n="cap_shop">vybavení na rybaření</figcaption>
         <div class="tape"></div>
       </figure>
       <figure class="polaroid">
         <img src="boruvky.jpeg" alt="Stánek U-Pick na sběr borůvek v lese">
-        <figcaption>sběr borůvek</figcaption>
+        <figcaption data-i18n="cap_berries">sběr borůvek</figcaption>
         <div class="tape"></div>
       </figure>
       <figure class="polaroid">
-        <img src="dum.png" alt="Interiér chatky s postelí a krbem">
-        <figcaption>chatka, kde Pepa spí</figcaption>
+        <img src="chatka.png" alt="Interiér chatky s postelí a krbem">
+        <figcaption data-i18n="cap_cabin">chatka, kde Josef spí</figcaption>
         <div class="tape"></div>
       </figure>
     </div>
@@ -498,30 +526,30 @@
 
 <section id="hra" class="section-teal">
   <div class="wrap">
-    <p class="kicker">herní smyčka</p>
-    <h2 class="title">Jezero, kyblík a obchod</h2>
-    <p class="lede" style="max-width:60ch; font-size:17px;">Celý den se točí kolem tří věcí: chytat ryby, prodávat úlovky a z výdělku si ulehčovat další rybaření.</p>
+    <p class="kicker" data-i18n="kicker_smycka">herní smyčka</p>
+    <h2 class="title" data-i18n="title_hra">Jezero, kyblík a obchod</h2>
+    <p class="lede" style="max-width:60ch; font-size:17px;" data-i18n="lede_hra">Celý den se točí kolem tří věcí: chytat ryby, prodávat úlovky a z výdělku si ulehčovat další rybaření.</p>
 
     <div class="loop-grid">
       <div class="loop-card">
         <svg viewBox="0 0 48 48"><path d="M4 24 C12 12 30 12 40 20 C34 19 28 22 26 24 C28 27 34 29 40 28 C30 37 12 37 4 24Z" fill="#e2874f" stroke="#fff2d6" stroke-width="1.4"/></svg>
-        <h3>Rybaření</h3>
-        <p>Nastupte na loď, vyberte návnadu, hoďte prut a naklikejte písmena, než vám ryba upluje.</p>
+        <h3 data-i18n="card_fish_title">Rybaření</h3>
+        <p data-i18n="card_fish_desc">Nastupte na loď, vyberte návnadu, hoďte prut a naklikejte písmena, než vám ryba upluje.</p>
       </div>
       <div class="loop-card">
         <svg viewBox="0 0 48 48"><rect x="10" y="18" width="28" height="22" rx="2" fill="none" stroke="#fff2d6" stroke-width="2"/><path d="M14 18 L18 8 H30 L34 18" fill="none" stroke="#fff2d6" stroke-width="2"/></svg>
-        <h3>Kyblík</h3>
-        <p>Inventář na úlovky a návnady. Nasazujte a sundávejte návnady, sledujte upgrady.</p>
+        <h3 data-i18n="card_bucket_title">Kyblík</h3>
+        <p data-i18n="card_bucket_desc">Inventář na úlovky a návnady. Nasazujte a sundávejte návnady, sledujte upgrady.</p>
       </div>
       <div class="loop-card">
         <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14" fill="none" stroke="#fff2d6" stroke-width="2"/><text x="24" y="29" font-family="Kalam" font-size="16" fill="#fff2d6" text-anchor="middle">$</text></svg>
-        <h3>Obchod</h3>
-        <p>Prodejte ryby za mince, kupte si vylepšení prutu i zásoby návnad na příště.</p>
+        <h3 data-i18n="card_shop_title">Obchod</h3>
+        <p data-i18n="card_shop_desc">Prodejte ryby za mince, kupte si vylepšení prutu i zásoby návnad na příště.</p>
       </div>
       <div class="loop-card">
         <svg viewBox="0 0 48 48"><path d="M24 40 C10 30 6 20 12 13 C17 8 24 12 24 18 C24 12 31 8 36 13 C42 20 38 30 24 40Z" fill="none" stroke="#fff2d6" stroke-width="2"/></svg>
-        <h3>Péče o Pepu</h3>
-        <p>Hlad, žízeň a smutek ovlivňují, jak rychle a snadno se rybaří. Udržujte ho v pohodě.</p>
+        <h3 data-i18n="card_care_title">Péče o Josefa</h3>
+        <p data-i18n="card_care_desc">Hlad, žízeň a smutek ovlivňují, jak rychle a snadno se rybaří. Udržujte ho v pohodě.</p>
       </div>
     </div>
   </div>
@@ -530,28 +558,28 @@
 <section id="ovladani" style="background:var(--parchment-dark);">
   <div class="wrap controls-wrap">
     <div>
-      <p class="kicker">ovládání</p>
-      <h2 class="title">Jak na to</h2>
-      <div class="key-row"><span class="key wide">A / D</span><p>pohyb do stran</p></div>
-      <div class="key-row"><span class="key">E</span><p>interakce, nastupování na loď</p></div>
-      <div class="key-row"><span class="key wide">MEZERNÍK</span><p>nahození prutu</p></div>
-      <div class="key-row"><span class="key">?</span><p>klikání zobrazených písmen při záběru ryby</p></div>
-      <div class="key-row"><span class="key">🪣</span><p>klik na kbelík otevře inventář</p></div>
-      <div class="key-row"><span class="key">🛏️</span><p>ulož si hru — jdi spát do postele v chatce</p></div>
+      <p class="kicker" data-i18n="kicker_ovladani">ovládání</p>
+      <h2 class="title" data-i18n="title_ovladani">Jak na to</h2>
+      <div class="key-row"><span class="key wide">A / D</span><p data-i18n="key_move">pohyb do stran</p></div>
+      <div class="key-row"><span class="key">E</span><p data-i18n="key_interact">interakce, nastupování na loď</p></div>
+      <div class="key-row"><span class="key wide">MEZERNÍK</span><p data-i18n="key_cast">nahození prutu</p></div>
+      <div class="key-row"><span class="key">?</span><p data-i18n="key_letters">klikání zobrazených písmen při záběru ryby</p></div>
+      <div class="key-row"><span class="key">🪣</span><p data-i18n="key_bucket">klik na kbelík otevře inventář</p></div>
+      <div class="key-row"><span class="key">🛏️</span><p data-i18n="key_sleep">ulož si hru — jdi spát do postele v chatce</p></div>
     </div>
 
     <div class="stat-list">
       <div class="stat-item">
-        <h4>Hlad</h4>
-        <p>Postupně klesá. Doplníte ho u stánku s jídlem u garáže — čím větší hlad, tím déle čekáte na záběr.</p>
+        <h4 data-i18n="stat_hunger_title">Hlad</h4>
+        <p data-i18n="stat_hunger_desc">Postupně klesá. Doplníte ho u stánku s jídlem u garáže — čím větší hlad, tím déle čekáte na záběr.</p>
       </div>
       <div class="stat-item thirst">
-        <h4>Žízeň</h4>
-        <p>Klesá s časem, doplníte ji v baru. Žíznivý Pepa se po mapě pohybuje pomaleji.</p>
+        <h4 data-i18n="stat_thirst_title">Žízeň</h4>
+        <p data-i18n="stat_thirst_desc">Klesá s časem, doplníte ji v baru. Žíznivý Josef se po mapě pohybuje pomaleji.</p>
       </div>
       <div class="stat-item misery">
-        <h4>Smutek</h4>
-        <p>Roste, když jsou hlad a žízeň nízko. Odpočinek u krbu ho sníží — čím vyšší smutek, tím víc písmen musíte při rybaření naklikat.</p>
+        <h4 data-i18n="stat_misery_title">Psychika</h4>
+        <p data-i18n="stat_misery_desc">Roste, když jsou hlad a žízeň nízko. Odpočinek u krbu ji sníží — čím vyšší psychika, tím víc písmen musíte při rybaření naklikat.</p>
       </div>
     </div>
   </div>
@@ -559,13 +587,13 @@
 
 <section class="final-cta">
   <div class="wrap">
-    <p class="kicker" style="justify-content:center;">poslední zastávka</p>
-    <h2 class="hand">Auto se samo neopraví</h2>
-    <p class="lede tag" style="max-width:50ch;">Vezmi prut, vyraž k jezeru a vydělej si cestu domů — jedna ryba po druhé.</p>
+    <p class="kicker" style="justify-content:center;" data-i18n="kicker_final">poslední zastávka</p>
+    <h2 class="hand" data-i18n="title_final">Auto se samo neopraví</h2>
+    <p class="lede tag" style="max-width:50ch;" data-i18n="lede_final">Vezmi prut, vyraž k jezeru a vydělej si cestu domů — jedna ryba po druhé.</p>
     <div class="cta-row" style="justify-content:center;">
       <a class="btn" href="https://github.com/stiburekf25/Summer-Fish/releases/download/v1.0/summer_fish_setup.exe" download>
         <svg class="frame" viewBox="0 0 220 56" preserveAspectRatio="none"><path d="M6,4 C60,0 160,8 214,3 C218,20 212,36 216,52 C150,56 70,50 4,54 C0,36 4,20 6,4Z" fill="#203f43" stroke="#2b2118" stroke-width="1.5"/></svg>
-        <span>⬇ Stáhnout Summer Fish</span>
+        <span data-i18n="btn_final">⬇ Stáhnout Summer Fish</span>
       </a>
     </div>
   </div>
@@ -574,7 +602,7 @@
 <footer>
   <div class="wrap">
     <span class="footer-hand">Summer Fish 🐟</span>
-    <span>Vytvořeno s láskou k rybaření · MIT licence</span>
+    <span data-i18n="footer_credit">Vytvořeno s láskou k rybaření · MIT licence</span>
   </div>
 </footer>
 
@@ -596,6 +624,101 @@
     window.addEventListener('scroll', update, {passive:true});
     window.addEventListener('resize', update);
     update();
+  })();
+</script>
+
+<script>
+  // CZ / EN language switch — swaps text content of every [data-i18n] element
+  (function(){
+    var translations = {
+      nav_pribeh: {cs:"Příběh", en:"Story"},
+      nav_galerie: {cs:"Galerie", en:"Gallery"},
+      nav_hra: {cs:"Herní smyčka", en:"Gameplay"},
+      nav_ovladani: {cs:"Ovládání", en:"Controls"},
+
+      eyebrow: {cs:"ručně kreslená letní pixelovka", en:"a hand-drawn summer pixel game"},
+      lede: {cs:"Josef má rozbité auto uprostřed letní dovolené. Jediná cesta domů vede přes jezero, prut a pořádnou trpělivost — vyraž s ním rybařit, sbírat borůvky a poznávat lidi kolem jezera.", en:"Joseph's car has broken down in the middle of his summer vacation. The only way home leads through the lake, a fishing rod, and a lot of patience — join him fishing, picking blueberries, and meeting people around the lake."},
+      btn_download: {cs:"⬇ Stáhnout hru (.exe)", en:"⬇ Download the game (.exe)"},
+      platform_note: {cs:"💻 Windows · zdarma · MIT licence", en:"💻 Windows · free · MIT license"},
+      hero_caption: {cs:"rybaření za soumraku", en:"fishing at dusk"},
+
+      kicker_ohre: {cs:"o hře", en:"about the game"},
+      title_story: {cs:"Prázdninový výlet,<br>který se protáhl", en:"A summer trip<br>that ran long"},
+      story_p1: {cs:"Hrajete za Josefa, kterému na cestě za letním dobrodružstvím vypověděla auto službu. Aby se dostal domů, musí si vydělat dost mincí — a k tomu vede jediná cesta: k jezeru, s prutem v ruce.", en:"You play as Joseph, whose car gave out on the way to a summer adventure. To get home, he needs to earn enough coins — and there's only one way to do that: down at the lake, rod in hand."},
+      story_p2: {cs:"Mezi hozením návnady a čekáním na záběr proteče spousta času — na sběr borůvek, povídání s místními a starost o to, aby Josef nebyl hladový, žíznivý ani smutný. Klidná hra o tom, že i porouchané auto může být začátek dobrého léta.", en:"Between casting the line and waiting for a bite, there's plenty of time left over — for picking blueberries, chatting with the locals, and making sure Joseph isn't hungry, thirsty, or losing his sanity. A relaxing game about how a broken-down car can still be the start of a great summer."},
+      pepa_title: {cs:"Josef", en:"Joseph"},
+      pepa_desc: {cs:"Přijíždí na letní výlet s autem, které ho nechalo na holičkách. Trpělivý, mírně nešikovný, ale odhodlaný ulovit si cestu domů — jednu rybu, jednu borůvku a jednu minci po druhé.", en:"Arrives on a summer trip with a car that left him stranded. Patient, a little clumsy, but determined to fish his way home — one fish, one blueberry, one coin at a time."},
+
+      kicker_denik: {cs:"z deníku hry", en:"from the game's diary"},
+      title_gallery: {cs:"Pár fotek z jezera, baru i lesa", en:"A few photos from the lake, the bar, and the woods"},
+      cap_catch: {cs:"zdolávání úlovku", en:"reeling in the catch"},
+      cap_bar: {cs:"večer v baru", en:"an evening at the bar"},
+      cap_shop: {cs:"vybavení na rybaření", en:"fishing gear"},
+      cap_berries: {cs:"sběr borůvek", en:"picking blueberries"},
+      cap_cabin: {cs:"chatka, kde Josef spí", en:"the cabin where Joseph sleeps"},
+
+      kicker_smycka: {cs:"herní smyčka", en:"gameplay loop"},
+      title_hra: {cs:"Jezero, kyblík a obchod", en:"The lake, the bucket, and the shop"},
+      lede_hra: {cs:"Celý den se točí kolem tří věcí: chytat ryby, prodávat úlovky a z výdělku si ulehčovat další rybaření.", en:"The whole day revolves around three things: catching fish, selling your catch, and using the earnings to make the next round of fishing a little easier."},
+      card_fish_title: {cs:"Rybaření", en:"Fishing"},
+      card_fish_desc: {cs:"Nastupte na loď, vyberte návnadu, hoďte prut a naklikejte písmena, než vám ryba upluje.", en:"Hop in the boat, pick your bait, cast the line, and type the letters before the fish gets away."},
+      card_bucket_title: {cs:"Kyblík", en:"Bucket"},
+      card_bucket_desc: {cs:"Inventář na úlovky a návnady. Nasazujte a sundávejte návnady, sledujte upgrady.", en:"Your inventory for catches and bait. Attach and swap bait, and keep track of upgrades."},
+      card_shop_title: {cs:"Obchod", en:"Shop"},
+      card_shop_desc: {cs:"Prodejte ryby za mince, kupte si vylepšení prutu i zásoby návnad na příště.", en:"Sell your fish for coins, and buy rod upgrades and fresh bait for next time."},
+      card_care_title: {cs:"Péče o Josefa", en:"Taking care of Joseph"},
+      card_care_desc: {cs:"Hlad, žízeň a psychika ovlivňují, jak rychle a snadno se rybaří. Udržujte ho v pohodě.", en:"Hunger, thirst, and sanity all affect how easily fishing goes. Keep him comfortable."},
+
+      kicker_ovladani: {cs:"ovládání", en:"controls"},
+      title_ovladani: {cs:"Jak na to", en:"How to play"},
+      key_move: {cs:"pohyb do stran", en:"move left / right"},
+      key_interact: {cs:"interakce, nastupování na loď", en:"interact, board the boat"},
+      key_cast: {cs:"nahození prutu", en:"cast the rod"},
+      key_letters: {cs:"klikání zobrazených písmen při záběru ryby", en:"type the letters shown when a fish bites"},
+      key_bucket: {cs:"klik na kbelík otevře inventář", en:"click the bucket to open your inventory"},
+      key_sleep: {cs:"ulož si hru — jdi spát do postele v chatce", en:"save your game — go to sleep in the cabin bed"},
+      stat_hunger_title: {cs:"Hlad", en:"Hunger"},
+      stat_hunger_desc: {cs:"Postupně klesá. Doplníte ho u stánku s jídlem u garáže — čím větší hlad, tím déle čekáte na záběr.", en:"Gradually drops over time. Refill it at the food stand by the garage — the hungrier Joseph is, the longer you'll wait for a bite."},
+      stat_thirst_title: {cs:"Žízeň", en:"Thirst"},
+      stat_thirst_desc: {cs:"Klesá s časem, doplníte ji v baru. Žíznivý Josef se po mapě pohybuje pomaleji.", en:"Drops over time, refill it at the bar. A thirsty Joseph moves more slowly around the map."},
+      stat_misery_title: {cs:"Psychika", en:"Sanity"},
+      stat_misery_desc: {cs:"Roste, když jsou hlad a žízeň nízko. Odpočinek u krbu ji sníží — čím vyšší psychika, tím víc písmen musíte při rybaření naklikat.", en:"Rises when hunger and thirst run low. Resting by the fireplace brings it down — the higher it gets, the more letters you'll need to type while fishing."},
+
+      kicker_final: {cs:"poslední zastávka", en:"last stop"},
+      title_final: {cs:"Auto se samo neopraví", en:"The car won't fix itself"},
+      lede_final: {cs:"Vezmi prut, vyraž k jezeru a vydělej si cestu domů — jedna ryba po druhé.", en:"Grab the rod, head to the lake, and earn your way home — one fish at a time."},
+      btn_final: {cs:"⬇ Stáhnout Summer Fish", en:"⬇ Download Summer Fish"},
+      footer_credit: {cs:"Vytvořeno s láskou k rybaření · MIT licence", en:"Made with love for fishing · MIT license"}
+    };
+
+    var pageTitles = {
+      cs: "Summer Fish — rybářská letní hra",
+      en: "Summer Fish — a summer fishing game"
+    };
+
+    function setLang(lang){
+      document.documentElement.lang = lang;
+      document.title = pageTitles[lang] || pageTitles.cs;
+      document.querySelectorAll('[data-i18n]').forEach(function(el){
+        var key = el.getAttribute('data-i18n');
+        var entry = translations[key];
+        if(entry && entry[lang] !== undefined){
+          el.innerHTML = entry[lang];
+        }
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(btn){
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      try{ localStorage.setItem('sf_lang', lang); }catch(e){}
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){ setLang(btn.getAttribute('data-lang')); });
+    });
+
+    var saved = 'cs';
+    try{ saved = localStorage.getItem('sf_lang') || 'cs'; }catch(e){}
+    setLang(saved);
   })();
 </script>
 
